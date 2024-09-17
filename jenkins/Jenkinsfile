@@ -1,3 +1,12 @@
 pipeline {
-
+    agent {
+        dockerfile true
+    }
+    stages {
+        stage('Verify') {
+            steps {
+                sh 'ech Done!'
+            }
+        }
+    }
 }
