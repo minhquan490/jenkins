@@ -6,7 +6,7 @@ pipeline {
         script {
           def commitMsg = sh(script: 'git log -1 --pretty=%B ${GIT_COMMIT}', returnStdout: true).trim()
 
-          // Check project code
+          // Check last commit
           if (!commitMsg.startsWith('JEN-')) {
             error('Commit msg must start with JEN-')
           }
