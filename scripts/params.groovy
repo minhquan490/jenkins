@@ -4,6 +4,7 @@ listView('Example View') {
         name('build-job')
     }
     columns {
+        buildParameters()
         status()
         weather()
         name()
