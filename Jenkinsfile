@@ -1,10 +1,9 @@
 pipeline {
-  agent any
+  agent docker
   stages {
-    // create job with three or two params
     stage('Build') {
       steps {
-        sh './gradlew clean build'
+        sh 'docker build'
       }
     }
 
