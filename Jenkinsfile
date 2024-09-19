@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build'
+        sh './gradlew clean build'
       }
     }
 
